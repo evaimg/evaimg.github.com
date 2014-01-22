@@ -66,95 +66,40 @@
     </div><!-- /.navbar-wrapper -->
 
 
-
-<!-- Carousel
- ================================================== -->
-<div id="myCarousel" class="carousel slide">
-    <div class="carousel-inner">
-        
-        <div class="item  active  ">
-            <img src=/images/slide-01.png alt="">
-                <div class="container" >
-                    <div class="carousel-caption">
-                        <h1> Imaging and Evaluation </h1>
-                        <p class="lead">An Open-souce Platform</p>
-                        <a class="btn btn-large btn-primary" href=/pages/about.html>Learn More</a>
-                    </div>
-                </div>
-                </div>
+    <div class="banner_small" style="height:100px">
     </div>
-    <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-    <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
-</div><!-- /.carousel -->
-
     
     
     <div class="container">
 	   <div class="content">
-            <div class='page'>
-            <h1>A compact platform for imaging and evaluation</h1>
-<p>Open software and hardware architecture for general purpose inspection system</p>
-<h2>Basic philosophy of EVA project</h2>
+	<div class='page'>
+		<div class="page-header"><h1>Downloads</h1></div>
+		<div><h2>Source Code</h2>
+<p>All the source code of EVA project is available on github: <a href="https://github.com/oeway/EVA/">EVA project</a>.</p>
+<h2>Icy Plugins</h2>
+<p>Icy plugin can be download directly in Icy, search the plugin name in the search bar, just click the plugin in the search result and icy will download it for you, dependency are handled automatically. The following link shows the document of plugin.
+If you are a developer, you can also downlaod the jar file (often with source code) in the following link. You need click "See technical details", and you will find the link.</p>
 <ul>
-<li>Extensible</li>
-<li>Open</li>
-<li>Compact</li>
-<li>Intuitive</li>
-</ul>
-<h2>Features</h2>
-<ul>
-<li>Data acquisition and device control through driver adapter framework</li>
-<li>Extensible plugins for signal processing and evaluation</li>
-<li>Full featured image processing tools</li>
-<li>Intuitive GUI and Well-organized workspace</li>
-<li>Online plugin repository</li>
-<li>Graphical programming</li>
-<li>Powerful Arm driven hardware, 32bit and up to 120 MHz</li>
-<li>Multi-axis mechanical arm control</li>
-<li>Active and Passive sychronorisation modes suitable for different acquisition speed</li>
-<li>Modulized hardware</li>
-</ul>
-<h2>Demo hardwares (devices)</h2>
-<ul>
-<li>Ultrasonic Imaging System (completed)</li>
-<li>Eddy Current Inspection System (Under construction)</li>
-<li>Digital Radioraphy (Under constrution)</li>
-</ul>
-<h2>Supported File Format</h2>
-<p>Files from the following NDT instruments have been supported:</p>
-<ul>
-<li>TIFF (default)</li>
-<li>DICOM/DICONDE file import and recieve from ethernet, for example CR scanners from GE</li>
-<li><a href="http://www.pva-analyticalsystems.com/en/products/sam-line/pva/sam-line/sam-300">PVA TePla SAM300 Scanning Acoustic Microscopes</a></li>
-<li>Non-Contact Air Coupled Ultrasonic Testing(NAU21 from Japan Probe)</li>
-</ul>
-            </div>
-    <script src="/theme/js/jquery.js"></script>
-    <div id="videogfw">
-        <script type="text/javascript">
-            function chooseVideo(src)
-            {
-                var video = '<iframe id="embededvideo" width=100% height=498 src=' + src + ' frameborder=0 allowfullscreen></iframe>';
-                $("#embededvideo").remove();
-                $("#videogfw").append(video);
-            }
-            var youtube_src = "//www.youtube.com/embed/pN5v-2BKSbE"
-            var youku_src = "http://player.youku.com/embed/XNjUxNzE0NzMy"
-            try
-            {
-                jQuery.getJSON('http://freegeoip.net/json/', function(location) {
-                    if (location.country_name == "China")
-                        chooseVideo(youku_src);
-                    else
-                        chooseVideo(youtube_src);
-                });
-            }
-            catch(err)
-            {
-                chooseVideo(youku_src);
-            }
-        </script>
-    </div>
+<li>
+<p><a href="http://icy.bioimageanalysis.org/plugin/Chart1DCanvas">Chart1DCanvas</a></p>
+</li>
+<li>
+<p><a href="http://icy.bioimageanalysis.org/plugin/IntensityInRectangle">IntensityInRectangle</a></p>
+</li>
+<li>
+<p><a href="http://icy.bioimageanalysis.org/plugin/pixelRowAlign">pixelRowAlign</a></p>
+</li>
+<li>
+<p><a href="http://icy.bioimageanalysis.org/plugin/EVA-Scanner">EVA-Scanner</a></p>
+</li>
+<li>
+<p><a href="http://icy.bioimageanalysis.org/plugin/Waveform_Envelope_Detector">Waveform Envelop Detector</a></p>
+</li>
+<li>
+<p><a href="http://icy.bioimageanalysis.org/plugin/Rapid_Learning">Rapid Learning</a></p>
+</li>
+</ul></div>
+	</div>
         <hr class="featurette-divider">
 		<footer>
 		  <p>Powered by <a href="http://icy.bioimageanalysis.org">Icy</a>/<a href="http://rsbweb.nih.gov/ij/‎">ImageJ</a>/<a href="http://www.micro-manager.org/‎">Micro-Manager</a>/<a href="http://smoothieware.org/">Smoothie</a>/<a href="https://github.com/grbl/grbl">GRBL</a>.</p>
