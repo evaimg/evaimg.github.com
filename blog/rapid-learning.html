@@ -41,6 +41,7 @@
      ga('create', 'UA-47365192-1', 'evaimg.org');
      ga('send', 'pageview');
 </script>
+
 </head>
 <body>
     <!-- NAVBAR
@@ -126,6 +127,7 @@ Welcome to have a try.</p>
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="http://www.evaimg.org/theme/js/jquery.js"></script>
     <script src="http://www.evaimg.org/theme/js/bootstrap.min.js"></script>
+    <script src="http://www.evaimg.org/theme/js/holder/holder.js"></script>
     <script>
         !function ($) {
             $(function(){
@@ -136,6 +138,38 @@ Welcome to have a try.</p>
               })
         }(window.jQuery)
     </script>
-    <script src="http://www.evaimg.org/theme/js/holder/holder.js"></script>
+	<script type="text/javascript">
+		function matchGeoLocation(currentGeoLoc)
+		{
+			$("div.geoSelect").each(function(i){
+				selectedNum=-1;
+				//geology match
+				$(this).children().each(function(j){
+					if($(this).attr("geo")== currentGeoLoc && selectedNum ==-1){
+						selectedNum = j;
+					}
+				});
+				// no element match the location, then select the last one
+				if(selectedNum == -1 && $(this).children().length !=0)
+					selectedNum = $(this).children().length-1;
+				// remove elements which are mismatched
+				$(this).children().each(function(j){
+					if(selectedNum !=j){
+						$(this).remove();
+					}
+				});
+			}); 
+		}
+		try
+		{
+			jQuery.getJSON('http://freegeoip.net/json/', function(location) {
+					matchGeoLocation(location.country_name);
+			});
+		}
+		catch(err)
+		{
+			matchGeoLocation('');
+		}
+	</script>
 </body>
 </html>
