@@ -62,10 +62,20 @@
                     <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
                     <div class="nav-collapse collapse">
                         <ul class="nav">
-                                    <li><a href="http://www.evaimg.org/">Home</a></li>
                                     <li><a href="http://www.evaimg.org/blog.html">Blog</a></li>
                                     <li><a href="http://wiki.evaimg.org">Wiki</a></li>
+                                    <li><a href="http://www.evaimg.org/pages/gallery.html">Gallery</a></li>
                                     <li><a href="http://www.evaimg.org/pages/downloads.html">Downloads</a></li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Support <b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                                    <li><a href="http://www.evaimg.org/pages/irc.html">IRC</a></li>
+                                                <li class="divider"></li>
+                                                    <li><a href="http://www.evaimg.org/#">Mail List</a></li>
+                                                    <li><a href="http://www.evaimg.org/#">Dev Mail List</a></li>
+                                                <li class="divider"></li>
+                                    </ul>
+                                </li>
                                     <li><a href="http://www.evaimg.org/pages/about.html">About</a></li>
                         </ul>
                     </div><!--/.nav-collapse -->
@@ -101,6 +111,7 @@ The following picture shows the screen shot of using intensity profile to show a
 2. Open you image, we can store a waveform as a row of pixels, which also means one pixels is one sample value from your data acquisition device. Don't care much about the data range, Icy supports 32-bit gray image, which will be enough for most ADC device.
 3. Then put a line ROI on the image, adjust it to the right position, you can press shift key to make it orthogonal.
 4. Click "IntensityProfile" in the menu bar. And you will see a cure displayed in a chart window. You can zoom in and out, the chart is handled by a java chart library known as "JfreeChart".</p></div>
+		<hr class="featurette-divider">
 		<div>
 			<h2>Comments</h2>
     <div id="disqus_thread"></div>
@@ -113,7 +124,7 @@ The following picture shows the screen shot of using intensity profile to show a
          (document.getElementsByTagName('head')[0] ||    document.getElementsByTagName('body')[0]).appendChild(dsq);})();
         </script>
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-		<div>
+		</div>
 	</div>	
         <hr class="featurette-divider">
 		<footer>
